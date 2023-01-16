@@ -1,0 +1,386 @@
+body {
+    background-color: rgb(20, 20, 20);
+    margin: 0px;
+    display: flex;
+    font-family: "Space Mono", serif;
+}
+
+/* The Modal (background) */
+#image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    display: block;
+    height: 70%;
+    width: auto;
+}
+.modal-content {
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+.modal-content-wrapper {
+    height: 100%;
+    max-width: fit-content;
+    margin: auto;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.viewer-info {
+    margin-top: 20px;
+    animation-name: zoom;
+    animation-duration: 0.4s;
+    color: whitesmoke;
+    max-width: 630px;
+}
+
+.viewer-info h1 {
+    font-size: 40px;
+}
+.viewer-info h2 {
+    font-size: 20px;
+}
+
+#image-viewer .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#image-viewer .close:hover,
+#image-viewer .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.menu-img {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 70px;
+    opacity: 0.8;
+}
+
+.menu-img.show {
+    opacity: 0.8;
+}
+
+#content {
+    overflow-y: scroll;
+    max-height: 80vh;
+    max-width: 60vw;
+    margin: 5vw;
+    opacity: 1;
+    color: whitesmoke;
+    z-index: 3;
+}
+
+.authentic-works > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.authentic-works img {
+    object-fit: cover;
+    width: 230px;
+    height: 230px;
+    transition: transform 250ms;
+}
+
+.authentic-works img:hover {
+    cursor: pointer;
+    transform: scale(105%);
+}
+
+.relative {
+    position: relative;
+}
+
+.learning {
+    background-image: url(assets/icons/dumbbell-solid.svg);
+    background-color: #00e37a;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    position: absolute;
+    right: -20px;
+    top: -8px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 12px 12px;
+    transform: rotate(344deg);
+}
+.learning2 {
+    background-image: url(assets/icons/dumbbell-solid.svg);
+    background-color: #00e37a;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    position: absolute;
+    left: 9px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 12px 12px;
+    transform: rotate(344deg);
+}
+
+.authentic-works div {
+    margin: 15px;
+}
+.authentic-works div h1 {
+    margin-left: 5px;
+    font-size: larger;
+}
+.authentic-works div h2 {
+    margin-top: 10px;
+    margin-left: 5px;
+    max-width: 230px;
+    font-size: medium;
+}
+
+.generated-works {
+    display: flex;
+    justify-content: center;
+}
+
+.authentic-works img {
+    object-fit: cover;
+    width: 230px;
+    height: 230px;
+}
+
+/* ========================================== Animating the content panel ========================================== */
+
+.show {
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.hide {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* -- YouTube Link Styles -- */
+
+body.menu-toggled > .meta-link > span {
+    color: rgb(30, 30, 30);
+}
+
+#source-link {
+    bottom: 60px;
+}
+
+#source-link > i {
+    color: rgb(94, 106, 210);
+}
+
+#yt-link > i {
+    color: rgb(239, 83, 80);
+}
+
+.meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    bottom: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 400ms, border-color 400ms;
+    z-index: 10000;
+}
+
+.meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link > i,
+.meta-link > span {
+    height: 20px;
+    line-height: 20px;
+}
+
+.meta-link > span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+/* ========================================== Menu ========================================== */
+#menu {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.menu-item {
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: clamp(3rem, 1vw, 8rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+}
+
+#menu-items {
+    margin-left: clamp(4rem, 5vw, 10rem);
+    position: relative;
+    z-index: 2;
+}
+
+#menu-background-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%, transparent 9%);
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+    height: 100vh;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+    width: 100vw;
+    z-index: 1;
+}
+
+#menu-background-image {
+    background-image: url("assets/images/klara-kulikova-kiLdjFm2y14-unsplash.jpg");
+    background-position: center 40%;
+    background-size: 110vmax;
+    height: 100%;
+    left: 0px;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+    width: 100%;
+    z-index: 0;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+}
+
+#menu-items:hover ~ #menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.1;
+}
+
+#menu-items:hover > .menu-item {
+    opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+    opacity: 1;
+}
+
+/* ======================================= Menu movement ======================================= */
+#menu[data-active-index="0"] > #menu-background-pattern {
+    background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+    background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+    background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+    background-position: 0% -100%;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+    background-position: center 25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+    background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+    background-position: center 75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+    background-position: center 100%;
+}
+
+/* ======================================= Fonts ======================================= */
+@font-face {
+    font-family: "Space Mono";
+    src: url("assets/fonts/font-spacemono/SpaceMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("assets/fonts/font-spacemono/SpaceMono-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("assets/fonts/font-spacemono/SpaceMono-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("assets/fonts/font-spacemono/SpaceMono-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* ======================================= Scrollbar style ======================================= */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    background-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Stable Diffusion/ivan_grohar_embeddings" vcs="" />
+    <mapping directory="$PROJECT_DIR$/Stable Diffusion/jozef_tominc_embeddings" vcs="" />
+    <mapping directory="$PROJECT_DIR$/Stable Diffusion/matej_sternen_embeddings" vcs="" />
+  </component>
+</project>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Galerija</title>
+        <link rel="icon" href="assets/images/huggingface.png">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/jquery-3.6.1.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="image-viewer">
+            <span id="image-viewer-close" class="close">&times;</span>
+            <div class="modal-content-wrapper">
+                <img class="modal-content" id="viewer-image"/>
+                <div class="viewer-info" id="id-viewer-info">
+                    <h1 id="image-viewer-author" class="viewer-h1" />
+                    <h2 id="image-viewer-title" class="viewer-h2" />
+                </div>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-items">
+                <img id="menu-img-deep" class="menu-img show" src="assets/images/deep-learning.png" />
+                <img id="menu-img-grohar" class="menu-img hide" src="assets/images/Ivan_Grohar.png" />
+                <img id="menu-img-tominc" class="menu-img hide" src="assets/images/jozef_tominc.png" />
+                <img id="menu-img-sternen" class="menu-img hide" src="assets/images/Matej_Sternen.png" />
+                <div class="menu-item">O projektu</div>
+                <div class="menu-item">Ivan Grohar</div>
+                <div class="menu-item">Jožef Tominc</div>
+                <div class="menu-item">Matej Sternen</div>
+            </div>
+            <div id="menu-background-pattern"></div>
+            <div id="menu-background-image"></div>
+        </div>
+        <div id="content">
+            <!-- =========================================================== Description ===========================================================-->
+            <div id="project-desc" class="show">
+                <h1 class="content-header">O projektu</h1>
+                <div class="mt-5">
+                    <p id="project_desc"></p>
+                    <div class="relative">
+                        <div class="learning2"></div>
+                        <p style="margin-left: 40px">Ta ikona označuje avtorsko delo, ki je bilo uporabljeno za učenje stila.</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h2>Slovenski slikarji in avtentična avtorska dela</h2>
+                    <div id="project_desc_auth_works" class="authentic-works div0">
+                        <!-- Generated via js -->
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h2>Dela generirana s Stable Diffusion v2 s priučenimi stili avtorjev</h2>
+                    <div id="project_desc_ai_works" class="authentic-works">
+                        <!-- Generated via js  -->
+                    </div>
+                </div>
+            </div>
+            <!-- ===========================================================/ Description ===========================================================-->
+            <!-- =========================================================== Grohar ===========================================================-->
+            <div id="grohar" class="hide">
+                <h1 class="content-header">Ivan Grohar</h1>
+                <div class="mt-5">
+                    <p id="grohar_desc"></p>
+                </div>
+                <div class="mt-4">
+                    <h2>Avtentična avtorska dela</h2>
+                    <div id="grohar_auth_works" class="authentic-works">
+                        <!-- Generated via js  -->
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h2>Dela generirana s Stable Diffusion v2 s priučenim stilom Ivana Groharja</h2>
+                    <div id="grohar_ai_works" class="authentic-works">
+                        <!-- Generated via js  -->
+                    </div>
+                </div>
+            </div>
+            <!-- ===========================================================/ Grohar ===========================================================-->
+            <!-- =========================================================== Sternen ===========================================================-->
+            <div id="sternen" class="hide">
+                <h1 class="content-header">Matej Sternen</h1>
+                <div class="mt-5">
+                    <p id="sternen_desc"></p>
+                </div>
+                <div class="mt-4">
+                    <h2>Avtentična avtorska dela</h2>
+                    <div id="sternen_auth_works" class="authentic-works">
+                        <!-- Generated via js  -->
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h2>Dela generirana s Stable Diffusion v2 s priučenim stilom Mateja Sternena</h2>
+                    <div id="sternen_ai_works" class="authentic-works">
+                        <!-- Generated via js  -->
+                    </div>
+                </div>
+            </div>
+            <!-- ===========================================================/ Sternen ===========================================================-->
+            <!-- =========================================================== Tominc ===========================================================-->
+            <div id="tominc" class="hide">
+                <h1 class="content-header">Jožef Tominc</h1>
+                <div class="mt-5">
+                    <p id="tominc_desc"></p>
+                </div>
+                <div class="mt-4">
+                    <h2>Avtentična avtorska dela</h2>
+                    <div id="tominc_auth_works" class="authentic-works">
+                        <!-- Generated via js  -->
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h2>Dela generirana s Stable Diffusion v2 s priučenim stilom Jožefa Tominca</h2>
+                    <div id="tominc_ai_works" class="authentic-works">
+                        <!-- Generated via js  -->
+                    </div>
+                </div>
+            </div>
+            <!-- ===========================================================/ Tominc ===========================================================-->
+        </div>
+
+        <!--<a id="source-link" class="meta-link" href="http://dnacapital.com" target="_blank">
+        <i class="fa-solid fa-link"></i>
+        <span>Source</span>
+    </a>
+
+    <a id="yt-link" class="meta-link" href="https://youtu.be/NUeCNvYY_x4" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+        <span>2.5 min tutorial</span>
+    </a>-->
+    </body>
+</html>
